@@ -1,4 +1,4 @@
--- Declarations (optional)-- A library clause declares a name as a library.  It 
+-- A library clause declares a name as a library.  It 
 -- does not create the library; it simply forward declares 
 -- it. 
 library IEEE;
@@ -17,7 +17,7 @@ entity mux_2 is
 		sel	: in  std_logic;
 
 		-- Output ports
-		q		: out std_logic_vector(3 downto 0)	
+		q		: out std_logic_vector(3 downto 0)
 	);
 	
 end entity;
@@ -26,9 +26,14 @@ end entity;
 
 architecture rtl of mux_2 is
 
-begin
+	-- Declarations (optional)
 
-	q <= A when sel = "0" else
-		  B; 
-		  
+begin
+	process(sel, A, B)
+	begin
+		 case sel is
+			  when '0' => q <= A;
+			  when '1' => q <= B;
+		 end case;
+	end process;
 end architecture;

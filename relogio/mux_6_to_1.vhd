@@ -1,6 +1,3 @@
--- A library clause declares a name as a library.  It 
--- does not create the library; it simply forward declares 
--- it. 
 library IEEE;
 -- STD_LOGIC and STD_LOGIC_VECTOR types, and relevant functions
 use ieee.std_logic_1164.all;
@@ -34,11 +31,17 @@ architecture rtl of mux_6_to_1 is
 
 begin
 
-	q <= A when sel = "000" else
-		  B when sel = "001" else
-		  C when sel = "010" else
-		  D when sel = "011" else
-		  E when sel = "100" else
-		  F;
-
+	process(sel)
+	begin
+		 case sel is
+			  when "000" => q <= A;
+			  when "001" => q <= B;
+			  when "010" => q <= C;
+			  when "011" => q <= D;
+			  when "100" => q <= E;
+			  when "101" => q <= F;
+			  when others => report "unreachable" severity failure;
+		 end case;
+	end process;
+	
 end architecture;

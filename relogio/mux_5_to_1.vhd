@@ -21,7 +21,6 @@ entity mux_5_to_1 is
 
 		-- Output ports
 		q		: out std_logic_vector(3 downto 0)
-		
 	);
 	
 end entity;
@@ -33,10 +32,15 @@ architecture rtl of mux_5_to_1 is
 	-- Declarations (optional)
 
 begin
-
-	q <= A when sel = "000" else
-		  B when sel = "001" else
-		  C when sel = "010" else
-		  D when sel = "011" else
-		  E;
+	process(sel)
+	begin
+		 case sel is
+			  when "000" => q <= A;
+			  when "001" => q <= B;
+			  when "010" => q <= C;
+			  when "011" => q <= D;
+			  when "100" => q <= E;
+			  when others => report "unreachable" severity failure;
+		 end case;
+	end process;
 end architecture;
