@@ -11,6 +11,7 @@ entity fluxoDados is
 			valor_ajusta: in std_logic_vector(3 downto 0);		 
 			clk, rst:  in std_logic;
 			EnDH, EnUH, EnDM, EnUM, EnDS, EnUS: in std_logic;
+			ResDH, ResUH, ResDM, ResUM, ResDS, ResUS: in std_logic;
 			
 			Z				: out std_logic;
 			DH_out:	out std_logic_vector(3 downto 0);
@@ -37,12 +38,12 @@ begin
 	mux_5: entity work.mux_5_to_1 port map (A => one,B => two, C => four, D => six, E => ten, sel => mux_sel_5, q => OUT_MUX_B);
 	ULA:	 entity work.ULA port map (A => OUT_MUX_A, B => OUT_MUX_B, sel => funcaoULA, C => ULA_OUT, overflow => overflowLocal);
 	mux_2: entity work.mux_2 port map (A => valor_ajusta, B => ULA_OUT, sel => is_ajusta, q => MUX_OUT);
-	regDH		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DH, CLK => clk, RST => rst, ENABLE => EnDH);
-	regUH		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => UH, CLK => clk, RST => rst, ENABLE => EnUH);
-	regDM		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DM, CLK => clk, RST => rst, ENABLE => EnDM);
-	regUM		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => UM, CLK => clk, RST => rst, ENABLE => EnUM);
-	regDS		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DS, CLK => clk, RST => rst, ENABLE => EnDS);
-	regUS		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => US, CLK => clk, RST => rst, ENABLE => EnUS);
+	regDH		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DH, CLK => clk, RST => ResDH, ENABLE => EnDH);
+	regUH		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => UH, CLK => clk, RST => ResUH, ENABLE => EnUH);
+	regDM		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DM, CLK => clk, RST => ResDM, ENABLE => EnDM);
+	regUM		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => UM, CLK => clk, RST => ResUM, ENABLE => EnUM);
+	regDS		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DS, CLK => clk, RST => ResDS, ENABLE => EnDS);
+	regUS		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => US, CLK => clk, RST => ResUS, ENABLE => EnUS);
 	 
 	Z <= NOT (ULA_OUT(3) OR ULA_OUT(2) OR ULA_OUT(1) OR ULA_OUT(0));
 	DH_out <= DH;

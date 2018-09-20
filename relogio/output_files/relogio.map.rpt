@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogio
-Thu Sep 20 15:46:50 2018
+Thu Sep 20 16:14:13 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 20 15:46:49 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 20 16:14:13 2018       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
@@ -347,6 +347,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enum      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; ends      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; enus      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resdh     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resuh     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resdm     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resum     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resds     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resus     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; z         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; dh_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; uh_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -388,7 +394,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Sep 20 15:46:39 2018
+    Info: Processing started: Thu Sep 20 16:14:03 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
@@ -398,7 +404,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_6_t
     Info (12022): Found design unit 1: mux_6_to_1-rtl File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 28
     Info (12023): Found entity 1: mux_6_to_1 File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file fluxoDados.vhd
-    Info (12022): Found design unit 1: fluxoDados-simples File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 26
+    Info (12022): Found design unit 1: fluxoDados-simples File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 27
     Info (12023): Found entity 1: fluxoDados File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: /home/raphacosta/Desktop/relogio/ULA.vhd Line: 14
@@ -442,18 +448,24 @@ Warning (10540): VHDL Signal Declaration warning at relogio.vhd(29): used explic
 Warning (10540): VHDL Signal Declaration warning at relogio.vhd(30): used explicit default value for signal "EnUM_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 30
 Warning (10540): VHDL Signal Declaration warning at relogio.vhd(31): used explicit default value for signal "EnDS_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 31
 Warning (10540): VHDL Signal Declaration warning at relogio.vhd(32): used explicit default value for signal "EnUS_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 32
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(34): object "Z_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(35): object "DH_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 35
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(36): object "UH_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 36
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(37): object "DM_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(38): object "UM_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(39): object "DS_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 39
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(40): object "US_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 40
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(41): object "overflow_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 41
-Info (12129): Elaborating entity "fluxoDados" using architecture "A:simples" for hierarchy "fluxoDados:FD" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 47
-Warning (10541): VHDL Signal Declaration warning at fluxoDados.vhd(22): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 22
-Warning (10036): Verilog HDL or VHDL warning at fluxoDados.vhd(28): object "overflowLocal" assigned a value but never read File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 28
-Info (12128): Elaborating entity "mux_6_to_1" for hierarchy "fluxoDados:FD|mux_6_to_1:mux_6" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(34): used explicit default value for signal "ResDH_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(35): used explicit default value for signal "ResUH_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(36): used explicit default value for signal "ResDM_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(37): used explicit default value for signal "ResUM_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(38): used explicit default value for signal "ResDS_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 38
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(39): used explicit default value for signal "ResUS_aux" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 39
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(41): object "Z_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 41
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(42): object "DH_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(43): object "UH_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(44): object "DM_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 44
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(45): object "UM_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(46): object "DS_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(47): object "US_out_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 47
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(48): object "overflow_aux" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 48
+Info (12129): Elaborating entity "fluxoDados" using architecture "A:simples" for hierarchy "fluxoDados:FD" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 54
+Warning (10541): VHDL Signal Declaration warning at fluxoDados.vhd(23): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 23
+Warning (10036): Verilog HDL or VHDL warning at fluxoDados.vhd(29): object "overflowLocal" assigned a value but never read File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 29
+Info (12128): Elaborating entity "mux_6_to_1" for hierarchy "fluxoDados:FD|mux_6_to_1:mux_6" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 37
 Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(37): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 37
 Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(38): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 38
 Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(39): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 39
@@ -465,7 +477,7 @@ Info (10041): Inferred latch for "q[0]" at mux_6_to_1.vhd(34) File: /home/raphac
 Info (10041): Inferred latch for "q[1]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
 Info (10041): Inferred latch for "q[2]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
 Info (10041): Inferred latch for "q[3]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Info (12128): Elaborating entity "mux_5_to_1" for hierarchy "fluxoDados:FD|mux_5_to_1:mux_5" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 37
+Info (12128): Elaborating entity "mux_5_to_1" for hierarchy "fluxoDados:FD|mux_5_to_1:mux_5" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 38
 Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(38): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 38
 Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(39): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 39
 Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(40): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 40
@@ -476,9 +488,9 @@ Info (10041): Inferred latch for "q[0]" at mux_5_to_1.vhd(35) File: /home/raphac
 Info (10041): Inferred latch for "q[1]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
 Info (10041): Inferred latch for "q[2]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
 Info (10041): Inferred latch for "q[3]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Info (12128): Elaborating entity "ULA" for hierarchy "fluxoDados:FD|ULA:ULA" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 38
-Info (12128): Elaborating entity "mux_2" for hierarchy "fluxoDados:FD|mux_2:mux_2" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 39
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxoDados:FD|registradorGenerico:regDH" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 40
+Info (12128): Elaborating entity "ULA" for hierarchy "fluxoDados:FD|ULA:ULA" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 39
+Info (12128): Elaborating entity "mux_2" for hierarchy "fluxoDados:FD|mux_2:mux_2" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 40
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxoDados:FD|registradorGenerico:regDH" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 41
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 13
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 13
@@ -592,10 +604,10 @@ Warning (21074): Design contains 23 input pin(s) that do not drive logic
 Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 83 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 154 warnings
-    Info: Peak virtual memory: 1250 megabytes
-    Info: Processing ended: Thu Sep 20 15:46:50 2018
-    Info: Elapsed time: 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 160 warnings
+    Info: Peak virtual memory: 1247 megabytes
+    Info: Processing ended: Thu Sep 20 16:14:13 2018
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 
 
