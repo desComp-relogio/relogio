@@ -8,20 +8,20 @@ use ieee.std_logic_1164.all;
 -- SIGNED and UNSIGNED types, and relevant functions
 use ieee.numeric_std.all;
 
-entity demux_1_to_4 is
+entity demux_6_std_logic is
 	port
 	(
 		-- Input ports
-		DIN		: in  std_logic_vector(3 downto 0);
-		sel	: in  std_logic_vector(1 downto 0);
+		DIN		: in  std_logic;
+		sel	: in  std_logic_vector(2 downto 0);
 
 		-- Output ports
-		A		: out  std_logic_vector(3 downto 0);
-		B		: out  std_logic_vector(3 downto 0);
-		C		: out  std_logic_vector(3 downto 0);
-		D		: out  std_logic_vector(3 downto 0);
-		E		: out  std_logic_vector(3 downto 0);
-		F		: out  std_logic_vector(3 downto 0)
+		A		: out  std_logic;
+		B		: out  std_logic;
+		C		: out  std_logic;
+		D		: out  std_logic;
+		E		: out  std_logic;
+		F		: out  std_logic
 		
 	);
 	
@@ -29,7 +29,7 @@ end entity;
 -- Library Clause(s) (optional)
 -- Use Clause(s) (optional)
 
-architecture rtl of demux_1_to_4 is
+architecture rtl of demux_6_std_logic is
 
 	-- Declarations (optional)
 

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for relogio
-Wed Sep 19 16:05:20 2018
+Wed Sep 19 17:48:57 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Wed Sep 19 16:05:20 2018           ;
+; Analysis & Elaboration Status      ; Failed - Wed Sep 19 17:48:57 2018           ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
@@ -158,7 +158,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Sep 19 16:05:11 2018
+    Info: Processing started: Wed Sep 19 17:48:47 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file mux_6_to_1.vhd
@@ -186,20 +186,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file calcula
 Info (12021): Found 2 design units, including 1 entities, in source file mux_5_to_1.vhd
     Info (12022): Found design unit 1: mux_5_to_1-rtl File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 31
     Info (12023): Found entity 1: mux_5_to_1 File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file demux_1_to_4.vhd
-    Info (12022): Found design unit 1: demux_1_to_4-rtl File: /home/raphacosta/Desktop/relogio/demux_1_to_4.vhd Line: 30
-    Info (12023): Found entity 1: demux_1_to_4 File: /home/raphacosta/Desktop/relogio/demux_1_to_4.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file mux_2.vhd
     Info (12022): Found design unit 1: mux_2-rtl File: /home/raphacosta/Desktop/relogio/mux_2.vhd Line: 27
     Info (12023): Found entity 1: mux_2 File: /home/raphacosta/Desktop/relogio/mux_2.vhd Line: 11
-Error (10309): VHDL Interface Declaration error in fluxoDados.vhd(54): interface object "saida_REG" of mode out cannot be read. Change object mode to buffer. File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 54
-Error (10577): VHDL error at fluxoDados.vhd(54): actual port "saida_REG" of mode "out" cannot be associated with formal port "DIN" of mode "in" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 54
-Error (10600): VHDL error at fluxoDados.vhd(54): can't read value of interface object "saida_REG" of mode OUT File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 54
-Error (10349): VHDL Association List error at fluxoDados.vhd(54): formal "E" does not exist File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 54
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 4 errors, 1 warning
+Info (12021): Found 2 design units, including 1 entities, in source file demux_6.vhd
+    Info (12022): Found design unit 1: demux_6-rtl File: /home/raphacosta/Desktop/relogio/demux_6.vhd Line: 32
+    Info (12023): Found entity 1: demux_6 File: /home/raphacosta/Desktop/relogio/demux_6.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file demux_6_std_logic.vhd
+    Info (12022): Found design unit 1: demux_6_std_logic-rtl File: /home/raphacosta/Desktop/relogio/demux_6_std_logic.vhd Line: 32
+    Info (12023): Found entity 1: demux_6_std_logic File: /home/raphacosta/Desktop/relogio/demux_6_std_logic.vhd Line: 11
+Error (10482): VHDL error at calculadora.vhd(46): object "entrada" is used but not declared File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 46
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "DHIn" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(7): see declaration for object "DHIn" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 7
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "UHIn" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(8): see declaration for object "UHIn" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 8
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "DMIn" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(9): see declaration for object "DMIn" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 9
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "UMIn" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(10): see declaration for object "UMIn" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 10
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "DSIn" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(11): see declaration for object "DSIn" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 11
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "USIn" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(12): see declaration for object "USIn" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 12
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "Mux_sel_6" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(13): see declaration for object "Mux_sel_6" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 13
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "Mux_sel_5" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(14): see declaration for object "Mux_sel_5" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 14
+Error (10346): VHDL error at calculadora.vhd(44): formal port or parameter "isAjusta" must have actual or default value File: /home/raphacosta/Desktop/relogio/calculadora.vhd Line: 44
+Error (10784): HDL error at fluxoDados.vhd(15): see declaration for object "isAjusta" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 15
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 19 errors, 1 warning
     Error: Peak virtual memory: 1552 megabytes
-    Error: Processing ended: Wed Sep 19 16:05:20 2018
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:20
+    Error: Processing ended: Wed Sep 19 17:48:57 2018
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:21
 
 

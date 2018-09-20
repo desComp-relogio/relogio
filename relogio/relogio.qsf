@@ -1123,6 +1123,7 @@ set_global_assignment -name VHDL_FILE mux_5_to_1.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE demux_1_to_4.vhd
 set_global_assignment -name VHDL_FILE mux_2.vhd
+set_global_assignment -name VHDL_FILE demux_6.vhd
+set_global_assignment -name VHDL_FILE demux_6_std_logic.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
