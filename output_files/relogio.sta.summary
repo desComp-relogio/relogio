@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.687
+TNS   : -123.265
+
+Type  : Slow 1200mV 85C Model Setup 'SM1:sequenciador|controle[3]'
+Slack : -2.469
+TNS   : -7.987
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.058
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SM1:sequenciador|controle[3]'
+Slack : 0.857
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -67.250
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SM1:sequenciador|controle[3]'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.281
+TNS   : -107.504
+
+Type  : Slow 1200mV 0C Model Setup 'SM1:sequenciador|controle[3]'
+Slack : -2.264
+TNS   : -7.329
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.002
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SM1:sequenciador|controle[3]'
+Slack : 0.917
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -67.250
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SM1:sequenciador|controle[3]'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.241
+TNS   : -36.665
+
+Type  : Fast 1200mV 0C Model Setup 'SM1:sequenciador|controle[3]'
+Slack : -0.720
+TNS   : -2.079
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.115
+TNS   : -0.207
+
+Type  : Fast 1200mV 0C Model Hold 'SM1:sequenciador|controle[3]'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -67.993
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SM1:sequenciador|controle[3]'
+Slack : 0.440
+TNS   : 0.000
+
+------------------------------------------------------------
