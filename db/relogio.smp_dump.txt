@@ -1,18 +1,23 @@
 
 State Machine - |relogio|SM1:sequenciador|fstate
-Name fstate.espera_seg fstate.soma_uh fstate.soma_dm fstate.soma_um fstate.soma_dh fstate.soma_ds fstate.compara_dh_2 fstate.compara_uh_10 fstate.compara_uh_4 fstate.compara_dm fstate.compara_um fstate.compara_ds fstate.soma_us fstate.compara_us fstate.reset_all 
-fstate.reset_all 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-fstate.compara_us 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-fstate.soma_us 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-fstate.compara_ds 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-fstate.compara_um 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-fstate.compara_dm 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-fstate.compara_uh_4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-fstate.compara_uh_10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-fstate.compara_dh_2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-fstate.soma_ds 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-fstate.soma_dh 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-fstate.soma_um 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-fstate.soma_dm 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-fstate.soma_uh 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-fstate.espera_seg 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name fstate.ajusta_DH fstate.ajusta_UH fstate.ajusta_DM fstate.ajustaUM fstate.isAjusta fstate.espera_seg fstate.soma_uh fstate.soma_dm fstate.soma_um fstate.soma_dh fstate.soma_ds fstate.compara_dh_2 fstate.compara_uh_10 fstate.compara_uh_4 fstate.compara_dm fstate.compara_um fstate.compara_ds fstate.soma_us fstate.compara_us fstate.reset_all 
+fstate.reset_all 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+fstate.compara_us 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+fstate.soma_us 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+fstate.compara_ds 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+fstate.compara_um 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+fstate.compara_dm 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+fstate.compara_uh_4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+fstate.compara_uh_10 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+fstate.compara_dh_2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+fstate.soma_ds 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+fstate.soma_dh 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+fstate.soma_um 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+fstate.soma_dm 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.soma_uh 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.espera_seg 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.isAjusta 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.ajustaUM 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.ajusta_DM 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.ajusta_UH 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.ajusta_DH 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
