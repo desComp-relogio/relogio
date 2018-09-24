@@ -8,10 +8,17 @@ entity relogio is
     CLOCK_50 : in STD_LOGIC;
     KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
     SW: in STD_LOGIC_VECTOR(17 DOWNTO 0);
-
-    -- Saidas (placa)
+	 
+	 Mux_sel_6, Mux_sel_5: out STD_LOGIC_VECTOR(2 downto 0);
+	 funcaoULA: out STD_LOGIC_VECTOR(1 downto 0);
+	 state: out STD_LOGIC_VECTOR(3 downto 0);
+	 is_ajusta, EnDH, EnUH, EnDM, EnUM, EnDS, EnUS, ResDH, ResUH, ResDM, ResUM, ResDS, ResUS, um_seg_out: out STD_LOGIC;
+	 DH_out, UH_out, DM_out, UM_out, DS_out, US_out: out STD_LOGIC_VECTOR(3 downto 0);
+	 controle_out: out STD_LOGIC_VECTOR(20 downto 0);
+	 
     LEDR  : out STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
     LEDG  : out STD_LOGIC_VECTOR(8 DOWNTO 0) := (others => '0');
+	 
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
   );
 end entity;
@@ -52,18 +59,6 @@ architecture comportamento of relogio is
 	
 	signal controle : std_logic_vector(20 downto 0);
 begin
-  
--- Extras, para usar com o fluxo de dados mais complexo.
---      <= controle(5);
---      <= controle(6);
---      <= controle(7);
---      <= controle(8);
---      <= controle(9);
---      <= controle(10);
---      <= controle(11);
---      <= controle(12);
---      <= controle(13);
---      <= controle(14);
 
   -- Instancia o fluxo de dados mais simples:
   FD : entity work.fluxoDados (simples) --(complexo)
@@ -110,34 +105,58 @@ begin
 --
   -- Indica o estado atual da maquina de estado, em decimal:
   display7 : entity work.conversorHex7seg
-    Port map (saida7seg => HEX7, dadoHex => '0' &  '0' & '0' & EnUS_aux);
+    Port map (saida7seg => HEX7, dadoHex => '0' &  '0' & '0' & Z_aux);
 --
   -- Instacia a maquina de estados:
-  sequenciador : entity work.SM1
+	sequenciador : entity work.SM1
     port map( reset => auxReset, clock => CLOCK_50,
-				  Z => Z_aux, sempre => sempre, um_seg => um_seg,controle => controle, state => state_aux);
+				  Z => Z_aux, sempre => sempre, um_seg => um_seg,controle => controle, state => state_aux);  --,
 				  
-	ResUS_aux <= controle(15);
-	ResDS_aux <= controle(16);
-	ResUM_aux <= controle(17);
-	ResDM_aux <= controle(18);
+	clk_1seg: entity work.clk_div port map(clk_50 => CLOCK_50, clk_1s => um_seg);
+	
+	ResDH_aux <= controle(20);	
 	ResUH_aux <= controle(19);
-	ResDH_aux <= controle(20);
+	ResDM_aux <= controle(18);
+	ResUM_aux <= controle(17);
+	ResDS_aux <= controle(16);
+	ResUS_aux <= controle(15);
 	
-	
-	EnUS_aux <= controle(9);
-	EnDS_aux <= controle(10);
-	EnUM_aux <= controle(11);
-	EnDM_aux <= controle(12);
-	EnUH_aux <= controle(13);
 	EnDH_aux <= controle(14);
-	
+	EnUH_aux <= controle(13);
+	EnDM_aux <= controle(12);
+	EnUM_aux <= controle(11);
+	EnDS_aux <= controle(10);
+	EnUS_aux <= controle(9);	
 	
 	is_ajusta_aux <= controle(8);
 	funcaoULA_aux <= controle(7 downto 6);
 	Mux_sel_5_aux <= controle(5 downto 3);
 	Mux_sel_6_aux <= controle(2 downto 0);
 	
-	clk_1seg: entity work.clk_div port map(clk_50 => CLOCK_50, clk_1s => um_seg);
+--	Mux_sel_6 <= mux_sel_6_aux;
+--	Mux_sel_5 <= mux_sel_5_aux;
+--	funcaoULA <= funcaoULA_aux;
+--	state <= state_aux;
+--	is_ajusta <= is_ajusta_aux;
+--	EnDH <= EnDH_aux;
+--	EnUH <= EnUH_aux;
+--	EnDM <= EnDM_aux;
+--	EnUM <= EnUM_aux;
+--	EnDS <= EnDS_aux;
+--	EnUS <= EnUS_aux;
+--	ResDH <= ResDH_aux;
+--	ResUH <= ResUH_aux;
+--	ResDM <= ResDM_aux;
+--	ResUM <= ResUM_aux;
+--	ResDS <= ResDS_aux;
+--	ResUS <= ResUS_aux;
+--	DH_out <= DH_out_aux;
+--	UH_out <= UH_out_aux;
+--	DM_out <= DM_out_aux;
+--	UM_out <= UM_out_aux;
+--	DS_out <= DS_out_aux;
+--	US_out <= US_out_aux;
+--	controle_out <= controle;
+--	um_seg_out <= um_seg;
 
 end architecture;

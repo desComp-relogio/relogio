@@ -1,0 +1,128 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "09/24/2018 11:15:45"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          relogio
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module relogio_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLOCK_50;
+reg [3:0] KEY;
+reg [17:0] SW;
+// wires                                               
+wire [20:0] controle_out;
+wire [3:0] DH_out;
+wire [3:0] DM_out;
+wire [3:0] DS_out;
+wire EnDH;
+wire EnDM;
+wire EnDS;
+wire EnUH;
+wire EnUM;
+wire EnUS;
+wire [1:0] funcaoULA;
+wire [6:0] HEX0;
+wire [6:0] HEX1;
+wire [6:0] HEX2;
+wire [6:0] HEX3;
+wire [6:0] HEX4;
+wire [6:0] HEX5;
+wire [6:0] HEX6;
+wire [6:0] HEX7;
+wire is_ajusta;
+wire [8:0] LEDG;
+wire [17:0] LEDR;
+wire [2:0] Mux_sel_5;
+wire [2:0] Mux_sel_6;
+wire ResDH;
+wire ResDM;
+wire ResDS;
+wire ResUH;
+wire ResUM;
+wire ResUS;
+wire [3:0] state;
+wire [3:0] UH_out;
+wire [3:0] UM_out;
+wire um_seg_out;
+wire [3:0] US_out;
+
+// assign statements (if any)                          
+relogio i1 (
+// port map - connection between master ports and signals/registers   
+	.CLOCK_50(CLOCK_50),
+	.controle_out(controle_out),
+	.DH_out(DH_out),
+	.DM_out(DM_out),
+	.DS_out(DS_out),
+	.EnDH(EnDH),
+	.EnDM(EnDM),
+	.EnDS(EnDS),
+	.EnUH(EnUH),
+	.\EnUM (EnUM),
+	.EnUS(EnUS),
+	.funcaoULA(funcaoULA),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.HEX4(HEX4),
+	.HEX5(HEX5),
+	.HEX6(HEX6),
+	.HEX7(HEX7),
+	.is_ajusta(is_ajusta),
+	.KEY(KEY),
+	.LEDG(LEDG),
+	.LEDR(LEDR),
+	.Mux_sel_5(Mux_sel_5),
+	.Mux_sel_6(Mux_sel_6),
+	.ResDH(ResDH),
+	.ResDM(ResDM),
+	.ResDS(ResDS),
+	.ResUH(ResUH),
+	.ResUM(ResUM),
+	.ResUS(ResUS),
+	.state(state),
+	.SW(SW),
+	.UH_out(UH_out),
+	.UM_out(UM_out),
+	.um_seg_out(um_seg_out),
+	.US_out(US_out)
+);
+initial 
+begin 
+#100000000 $finish;
+end 
+
+// CLOCK_50
+always
+begin
+	CLOCK_50 = 1'b0;
+	CLOCK_50 = #10000 1'b1;
+	#10000;
+end 
+endmodule
+

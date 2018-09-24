@@ -37,7 +37,7 @@ begin
 	mux_6: entity work.mux_6_to_1 port map (A => US,B => DS, C => UM, D => DM, E => UH, F => DH, sel => mux_sel_6, q => OUT_MUX_A);
 	mux_5: entity work.mux_5_to_1 port map (A => one,B => two, C => four, D => six, E => ten, sel => mux_sel_5, q => OUT_MUX_B);
 	ULA:	 entity work.ULA port map (A => OUT_MUX_A, B => OUT_MUX_B, sel => funcaoULA, C => ULA_OUT, overflow => overflowLocal);
-	mux_2: entity work.mux_2 port map (A => valor_ajusta, B => ULA_OUT, sel => is_ajusta, q => MUX_OUT);
+	mux_2: entity work.mux_2 port map (A => ULA_OUT, B => valor_ajusta, sel => is_ajusta, q => MUX_OUT);
 	regDH		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DH, CLK => clk, RST => ResDH, ENABLE => EnDH);
 	regUH		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => UH, CLK => clk, RST => ResUH, ENABLE => EnUH);
 	regDM		 : entity work.registradorGenerico generic map (larguraDados => 4) port map (DIN => MUX_OUT, DOUT => DM, CLK => clk, RST => ResDM, ENABLE => EnDM);

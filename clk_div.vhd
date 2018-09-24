@@ -14,10 +14,12 @@ begin
 	begin
 		if(rising_edge(clk_50)) then
 		counter <= counter + x"0000001";
-			if(counter>=x"2FAF080") then
+			if(counter>=x"17D7840") then       -- 2FAF080
 				counter <= x"0000000";
 			end if;
 		end if;
 	end process;
 	clk_1s <= '0' when counter < x"17D7840" else '1';
 end Behavioral;
+
+-- code example source: https://www.fpga4student.com/2016/11/vhdl-code-for-digital-clock-on-fpga.html

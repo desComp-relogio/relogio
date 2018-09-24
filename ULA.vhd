@@ -20,8 +20,8 @@ begin
   begin
     C9 := (others => '0');
     case Sel is
-      when "00" => C9 := std_logic_vector(resize(signed(std_logic_vector(signed(A) + signed(B))), C9'length));
-      when "01" => C9 := std_logic_vector(resize(signed(std_logic_vector(signed(A) - signed(B))), C9'length));
+      when "00" => C9 := std_logic_vector(resize(unsigned(std_logic_vector(unsigned(A) + unsigned(B))), C9'length));
+      when "01" => C9 := std_logic_vector(resize(unsigned(std_logic_vector(unsigned(A) - unsigned(B))), C9'length));
       when "10" => C9(4 downto 0) := '0' & std_logic_vector(A XOR B);
       when "11" => C9(4 downto 0) := '0' & std_logic_vector(A AND B);
       when others => C9 := (others => '0');

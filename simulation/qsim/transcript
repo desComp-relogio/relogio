@@ -1,0 +1,33 @@
+# do relogio.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:15:46 on Sep 24,2018
+# vlog -work work relogio.vo 
+# -- Compiling module relogio
+# 
+# Top level modules:
+# 	relogio
+# End time: 11:15:46 on Sep 24,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:15:46 on Sep 24,2018
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module relogio_vlg_vec_tst
+# 
+# Top level modules:
+# 	relogio_vlg_vec_tst
+# End time: 11:15:46 on Sep 24,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.relogio_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 11:15:46 on Sep 24,2018
+# Loading work.relogio_vlg_vec_tst
+# Loading work.relogio
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Note: $finish    : Waveform.vwf.vt(117)
+#    Time: 100 us  Iteration: 0  Instance: /relogio_vlg_vec_tst
+# End time: 11:15:47 on Sep 24,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
