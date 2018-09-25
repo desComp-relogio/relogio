@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogio
-Mon Sep 24 16:02:57 2018
+Mon Sep 24 18:46:44 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -10,34 +10,7 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |relogio|SM1:sequenciador|fstate
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDH
- 13. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUH
- 14. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDM
- 15. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUM
- 16. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDS
- 17. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUS
- 18. Port Connectivity Checks: "SM1:sequenciador"
- 19. Port Connectivity Checks: "conversorHex7Seg:display7"
- 20. Port Connectivity Checks: "conversorHex7Seg:display6"
- 21. Port Connectivity Checks: "conversorHex7Seg:display5"
- 22. Port Connectivity Checks: "conversorHex7Seg:display4"
- 23. Port Connectivity Checks: "conversorHex7Seg:display3"
- 24. Port Connectivity Checks: "conversorHex7Seg:display2"
- 25. Port Connectivity Checks: "conversorHex7Seg:display1"
- 26. Port Connectivity Checks: "conversorHex7Seg:display0"
- 27. Port Connectivity Checks: "fluxoDados:FD|ULA:ULA"
- 28. Port Connectivity Checks: "fluxoDados:FD|mux_5_to_1:mux_5"
- 29. Port Connectivity Checks: "fluxoDados:FD"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -64,20 +37,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 24 16:02:57 2018       ;
+; Analysis & Synthesis Status        ; Failed - Mon Sep 24 18:46:44 2018           ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 218                                         ;
-;     Total combinational functions  ; 197                                         ;
-;     Dedicated logic registers      ; 72                                          ;
-; Total registers                    ; 72                                          ;
-; Total pins                         ; 177                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -180,404 +153,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; SM1.vhd                          ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/SM1.vhd                 ;         ;
-; relogio.vhd                      ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/relogio.vhd             ;         ;
-; mux_6_to_1.vhd                   ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd          ;         ;
-; fluxoDados.vhd                   ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/fluxoDados.vhd          ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/ULA.vhd                 ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/registradorGenerico.vhd ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/conversorHex7Seg.vhd    ;         ;
-; mux_5_to_1.vhd                   ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd          ;         ;
-; mux_2.vhd                        ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/mux_2.vhd               ;         ;
-; clk_div.vhd                      ; yes             ; User VHDL File  ; /home/raphacosta/Desktop/relogio/clk_div.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 218            ;
-;                                             ;                ;
-; Total combinational functions               ; 197            ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 109            ;
-;     -- 3 input functions                    ; 35             ;
-;     -- <=2 input functions                  ; 53             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 163            ;
-;     -- arithmetic mode                      ; 34             ;
-;                                             ;                ;
-; Total registers                             ; 72             ;
-;     -- Dedicated logic registers            ; 72             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 177            ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 72             ;
-; Total fan-out                               ; 1096           ;
-; Average fan-out                             ; 1.76           ;
-+---------------------------------------------+----------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name         ; Library Name ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------------+--------------+
-; |relogio                          ; 197 (23)          ; 72 (0)       ; 0           ; 0            ; 0       ; 0         ; 177  ; 0            ; |relogio                                         ; relogio             ; work         ;
-;    |SM1:sequenciador|             ; 52 (52)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|SM1:sequenciador                        ; SM1                 ; work         ;
-;    |clk_div:clk_1seg|             ; 36 (36)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|clk_div:clk_1seg                        ; clk_div             ; work         ;
-;    |conversorHex7Seg:display0|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display0               ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display1|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display1               ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display2|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display2               ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display3|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display3               ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display4|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display4               ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display5|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display5               ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display6|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display6               ; conversorHex7Seg    ; work         ;
-;    |fluxoDados:FD|                ; 36 (2)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD                           ; fluxoDados          ; work         ;
-;       |ULA:ULA|                   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|ULA:ULA                   ; ULA                 ; work         ;
-;       |mux_2:mux_2|               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|mux_2:mux_2               ; mux_2               ; work         ;
-;       |mux_5_to_1:mux_5|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|mux_5_to_1:mux_5          ; mux_5_to_1          ; work         ;
-;       |mux_6_to_1:mux_6|          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|mux_6_to_1:mux_6          ; mux_6_to_1          ; work         ;
-;       |registradorGenerico:regDH| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regDH ; registradorGenerico ; work         ;
-;       |registradorGenerico:regDM| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regDM ; registradorGenerico ; work         ;
-;       |registradorGenerico:regDS| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regDS ; registradorGenerico ; work         ;
-;       |registradorGenerico:regUH| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regUH ; registradorGenerico ; work         ;
-;       |registradorGenerico:regUM| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regUM ; registradorGenerico ; work         ;
-;       |registradorGenerico:regUS| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regUS ; registradorGenerico ; work         ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |relogio|SM1:sequenciador|fstate                                                                                                                                                                                                                                                                                                                                                                  ;
-+----------------------+------------------+------------------+------------------+-----------------+-----------------+-------------------+----------------+----------------+----------------+----------------+----------------+---------------------+----------------------+---------------------+-------------------+-------------------+-------------------+----------------+-------------------+------------------+
-; Name                 ; fstate.ajusta_DH ; fstate.ajusta_UH ; fstate.ajusta_DM ; fstate.ajustaUM ; fstate.isAjusta ; fstate.espera_seg ; fstate.soma_uh ; fstate.soma_dm ; fstate.soma_um ; fstate.soma_dh ; fstate.soma_ds ; fstate.compara_dh_2 ; fstate.compara_uh_10 ; fstate.compara_uh_4 ; fstate.compara_dm ; fstate.compara_um ; fstate.compara_ds ; fstate.soma_us ; fstate.compara_us ; fstate.reset_all ;
-+----------------------+------------------+------------------+------------------+-----------------+-----------------+-------------------+----------------+----------------+----------------+----------------+----------------+---------------------+----------------------+---------------------+-------------------+-------------------+-------------------+----------------+-------------------+------------------+
-; fstate.reset_all     ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 0                ;
-; fstate.compara_us    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 1                 ; 1                ;
-; fstate.soma_us       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 1              ; 0                 ; 1                ;
-; fstate.compara_ds    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 1                 ; 0              ; 0                 ; 1                ;
-; fstate.compara_um    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 1                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.compara_dm    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 1                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.compara_uh_4  ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 1                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.compara_uh_10 ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 1                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.compara_dh_2  ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.soma_ds       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.soma_dh       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.soma_um       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.soma_dm       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.soma_uh       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.espera_seg    ; 0                ; 0                ; 0                ; 0               ; 0               ; 1                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.isAjusta      ; 0                ; 0                ; 0                ; 0               ; 1               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.ajustaUM      ; 0                ; 0                ; 0                ; 1               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.ajusta_DM     ; 0                ; 0                ; 1                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.ajusta_UH     ; 0                ; 1                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-; fstate.ajusta_DH     ; 1                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
-+----------------------+------------------+------------------+------------------+-----------------+-----------------+-------------------+----------------+----------------+----------------+----------------+----------------+---------------------+----------------------+---------------------+-------------------+-------------------+-------------------+----------------+-------------------+------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; valor_ajusta_aux[0]                                ; valor_ajusta_aux[1] ; yes                    ;
-; valor_ajusta_aux[2]                                ; valor_ajusta_aux[1] ; yes                    ;
-; valor_ajusta_aux[1]                                ; valor_ajusta_aux[1] ; yes                    ;
-; valor_ajusta_aux[3]                                ; valor_ajusta_aux[1] ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 72    ;
-; Number of registers using Synchronous Clear  ; 28    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 24    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |relogio|fluxoDados:FD|mux_6_to_1:mux_6|Mux0 ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |relogio|valor_ajusta_aux[2]                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDH ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUH ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDM ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUM ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDS ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUS ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "SM1:sequenciador" ;
-+--------+-------+----------+------------------+
-; Port   ; Type  ; Severity ; Details          ;
-+--------+-------+----------+------------------+
-; reset  ; Input ; Info     ; Stuck at GND     ;
-; sempre ; Input ; Info     ; Stuck at VCC     ;
-+--------+-------+----------+------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display7" ;
-+---------------+-------+----------+--------------------+
-; Port          ; Type  ; Severity ; Details            ;
-+---------------+-------+----------+--------------------+
-; dadohex[3..1] ; Input ; Info     ; Stuck at GND       ;
-; apaga         ; Input ; Info     ; Stuck at GND       ;
-; negativo      ; Input ; Info     ; Stuck at GND       ;
-; overflow      ; Input ; Info     ; Stuck at GND       ;
-+---------------+-------+----------+--------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display6" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display5" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display4" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display3" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display2" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display1" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "conversorHex7Seg:display0" ;
-+----------+-------+----------+-------------------------+
-; Port     ; Type  ; Severity ; Details                 ;
-+----------+-------+----------+-------------------------+
-; apaga    ; Input ; Info     ; Stuck at GND            ;
-; negativo ; Input ; Info     ; Stuck at GND            ;
-; overflow ; Input ; Info     ; Stuck at GND            ;
-+----------+-------+----------+-------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fluxoDados:FD|ULA:ULA"                                                                  ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "fluxoDados:FD|mux_5_to_1:mux_5" ;
-+---------+-------+----------+-------------------------------+
-; Port    ; Type  ; Severity ; Details                       ;
-+---------+-------+----------+-------------------------------+
-; a[3..1] ; Input ; Info     ; Stuck at GND                  ;
-; a[0]    ; Input ; Info     ; Stuck at VCC                  ;
-; b[3..2] ; Input ; Info     ; Stuck at GND                  ;
-; b[1]    ; Input ; Info     ; Stuck at VCC                  ;
-; b[0]    ; Input ; Info     ; Stuck at GND                  ;
-; c[1..0] ; Input ; Info     ; Stuck at GND                  ;
-; c[3]    ; Input ; Info     ; Stuck at GND                  ;
-; c[2]    ; Input ; Info     ; Stuck at VCC                  ;
-; d[2..1] ; Input ; Info     ; Stuck at VCC                  ;
-; d[3]    ; Input ; Info     ; Stuck at GND                  ;
-; d[0]    ; Input ; Info     ; Stuck at GND                  ;
-; e[3]    ; Input ; Info     ; Stuck at VCC                  ;
-; e[2]    ; Input ; Info     ; Stuck at GND                  ;
-; e[1]    ; Input ; Info     ; Stuck at VCC                  ;
-; e[0]    ; Input ; Info     ; Stuck at GND                  ;
-+---------+-------+----------+-------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fluxoDados:FD"                                                                          ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; rst      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 177                         ;
-; cycloneiii_ff         ; 72                          ;
-;     ENA CLR           ; 24                          ;
-;     SCLR              ; 28                          ;
-;     plain             ; 20                          ;
-; cycloneiii_lcell_comb ; 199                         ;
-;     arith             ; 34                          ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 5                           ;
-;     normal            ; 165                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 30                          ;
-;         4 data inputs ; 109                         ;
-;                       ;                             ;
-; Max LUT depth         ; 8.30                        ;
-; Average LUT depth     ; 4.58                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Mon Sep 24 16:02:46 2018
+    Info: Processing started: Mon Sep 24 18:46:34 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file SM1.vhd
-    Info (12022): Found design unit 1: SM1-BEHAVIOR File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 39
+    Info (12022): Found design unit 1: SM1-BEHAVIOR File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 40
     Info (12023): Found entity 1: SM1 File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: relogio-comportamento File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 27
+    Info (12022): Found design unit 1: relogio-comportamento File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
     Info (12023): Found entity 1: relogio File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux_6_to_1.vhd
     Info (12022): Found design unit 1: mux_6_to_1-rtl File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 28
@@ -591,9 +180,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/raphacosta/Desktop/relogio/registradorGenerico.vhd Line: 14
     Info (12023): Found entity 1: registradorGenerico File: /home/raphacosta/Desktop/relogio/registradorGenerico.vhd Line: 4
-Info (12021): Found 3 design units, including 1 entities, in source file divisorGenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divisaoPor2 File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 14
-    Info (12022): Found design unit 2: divisorGenerico-divisaoGenerica File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 27
+Info (12021): Found 4 design units, including 1 entities, in source file divisorGenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divPor2 File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 15
+    Info (12022): Found design unit 2: divisorGenerico-divPotenciaDe2 File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 29
+    Info (12022): Found design unit 3: divisorGenerico-divInteiro File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 43
     Info (12023): Found entity 1: divisorGenerico File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
     Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/raphacosta/Desktop/relogio/conversorHex7Seg.vhd Line: 17
@@ -607,218 +197,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_2.v
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
     Info (12022): Found design unit 1: clk_div-Behavioral File: /home/raphacosta/Desktop/relogio/clk_div.vhd Line: 10
     Info (12023): Found entity 1: clk_div File: /home/raphacosta/Desktop/relogio/clk_div.vhd Line: 4
-Info (12127): Elaborating entity "relogio" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(12): used implicit default value for signal "Mux_sel_6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(12): used implicit default value for signal "Mux_sel_5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(13): used implicit default value for signal "funcaoULA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(14): used implicit default value for signal "state" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "is_ajusta" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "EnDH" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "EnUH" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "EnDM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "EnUM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "EnDS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "EnUS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "ResDH" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "ResUH" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "ResDM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "ResUM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "ResDS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "ResUS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(15): used implicit default value for signal "um_seg_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(16): used implicit default value for signal "DH_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(16): used implicit default value for signal "UH_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(16): used implicit default value for signal "DM_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(16): used implicit default value for signal "UM_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(16): used implicit default value for signal "DS_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(16): used implicit default value for signal "US_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at relogio.vhd(17): used implicit default value for signal "controle_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(19): used explicit default value for signal "LEDR" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(20): used explicit default value for signal "LEDG" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(33): used explicit default value for signal "auxReset" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(48): used explicit default value for signal "sempre" because signal was never assigned a value File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 48
-Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(64): object "auxOverFlow" assigned a value but never read File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 64
-Warning (10492): VHDL Process Statement warning at relogio.vhd(170): signal "DH_out_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 170
-Warning (10631): VHDL Process Statement warning at relogio.vhd(152): inferring latch(es) for signal or variable "valor_ajusta_aux", which holds its previous value in one or more paths through the process File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-Info (10041): Inferred latch for "valor_ajusta_aux[0]" at relogio.vhd(152) File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-Info (10041): Inferred latch for "valor_ajusta_aux[1]" at relogio.vhd(152) File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-Info (10041): Inferred latch for "valor_ajusta_aux[2]" at relogio.vhd(152) File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-Info (10041): Inferred latch for "valor_ajusta_aux[3]" at relogio.vhd(152) File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-Info (12129): Elaborating entity "fluxoDados" using architecture "A:simples" for hierarchy "fluxoDados:FD" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 70
-Warning (10541): VHDL Signal Declaration warning at fluxoDados.vhd(23): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 23
-Warning (10036): Verilog HDL or VHDL warning at fluxoDados.vhd(29): object "overflowLocal" assigned a value but never read File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 29
-Info (12128): Elaborating entity "mux_6_to_1" for hierarchy "fluxoDados:FD|mux_6_to_1:mux_6" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(37): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(38): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(39): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(40): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(41): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 41
-Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(42): signal "F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 42
-Warning (10631): VHDL Process Statement warning at mux_6_to_1.vhd(34): inferring latch(es) for signal or variable "q", which holds its previous value in one or more paths through the process File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Info (10041): Inferred latch for "q[0]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Info (10041): Inferred latch for "q[1]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Info (10041): Inferred latch for "q[2]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Info (10041): Inferred latch for "q[3]" at mux_6_to_1.vhd(34) File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Info (12128): Elaborating entity "mux_5_to_1" for hierarchy "fluxoDados:FD|mux_5_to_1:mux_5" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(38): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(39): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(40): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(41): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 41
-Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(42): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 42
-Warning (10631): VHDL Process Statement warning at mux_5_to_1.vhd(35): inferring latch(es) for signal or variable "q", which holds its previous value in one or more paths through the process File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Info (10041): Inferred latch for "q[0]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Info (10041): Inferred latch for "q[1]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Info (10041): Inferred latch for "q[2]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Info (10041): Inferred latch for "q[3]" at mux_5_to_1.vhd(35) File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Info (12128): Elaborating entity "ULA" for hierarchy "fluxoDados:FD|ULA:ULA" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 39
-Info (12128): Elaborating entity "mux_2" for hierarchy "fluxoDados:FD|mux_2:mux_2" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 40
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxoDados:FD|registradorGenerico:regDH" File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 41
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 87
-Info (12128): Elaborating entity "SM1" for hierarchy "SM1:sequenciador" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 117
-Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:clk_1seg" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 122
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[0]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[1]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[2]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[3]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 35
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[0]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[1]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[2]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[3]" is permanently enabled File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 34
-Warning (13012): Latch valor_ajusta_aux[0] has unsafe behavior File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr20 File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 66
-Warning (13012): Latch valor_ajusta_aux[2] has unsafe behavior File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr20 File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 66
-Warning (13012): Latch valor_ajusta_aux[1] has unsafe behavior File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr20 File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 66
-Warning (13012): Latch valor_ajusta_aux[3] has unsafe behavior File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 152
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr20 File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 66
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Mux_sel_6[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-    Warning (13410): Pin "Mux_sel_6[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-    Warning (13410): Pin "Mux_sel_6[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-    Warning (13410): Pin "Mux_sel_5[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-    Warning (13410): Pin "Mux_sel_5[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-    Warning (13410): Pin "Mux_sel_5[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 12
-    Warning (13410): Pin "funcaoULA[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 13
-    Warning (13410): Pin "funcaoULA[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 13
-    Warning (13410): Pin "state[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 14
-    Warning (13410): Pin "state[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 14
-    Warning (13410): Pin "state[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 14
-    Warning (13410): Pin "state[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 14
-    Warning (13410): Pin "is_ajusta" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "EnDH" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "EnUH" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "EnDM" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "EnUM" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "EnDS" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "EnUS" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "ResDH" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "ResUH" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "ResDM" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "ResUM" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "ResDS" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "ResUS" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "um_seg_out" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 15
-    Warning (13410): Pin "DH_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DH_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DH_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DH_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UH_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UH_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UH_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UH_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DM_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DM_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DM_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DM_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UM_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UM_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UM_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "UM_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DS_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DS_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DS_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "DS_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "US_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "US_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "US_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "US_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 16
-    Warning (13410): Pin "controle_out[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[4]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[5]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[6]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[7]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[8]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[9]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[10]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[11]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[12]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[13]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[14]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[15]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[16]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[17]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[18]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[19]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "controle_out[20]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 17
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 19
-    Warning (13410): Pin "LEDG[0]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "LEDG[8]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 22
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 22
-    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 22
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[10]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[11]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[12]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[13]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[14]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[15]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[16]" File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 10
-Info (21057): Implemented 399 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 154 output pins
-    Info (21061): Implemented 222 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 180 warnings
-    Info: Peak virtual memory: 1253 megabytes
-    Info: Processing ended: Mon Sep 24 16:02:57 2018
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+Error (10795): VHDL error at relogio.vhd(123): actual expression for generic divisor cannot reference a signal File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 123
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 1236 megabytes
+    Error: Processing ended: Mon Sep 24 18:46:44 2018
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:22
 
 

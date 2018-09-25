@@ -9,13 +9,6 @@ entity relogio is
     KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
     SW: in STD_LOGIC_VECTOR(17 DOWNTO 0);
 	 
-	 Mux_sel_6, Mux_sel_5: out STD_LOGIC_VECTOR(2 downto 0);
-	 funcaoULA: out STD_LOGIC_VECTOR(1 downto 0);
-	 state: out STD_LOGIC_VECTOR(3 downto 0);
-	 is_ajusta, EnDH, EnUH, EnDM, EnUM, EnDS, EnUS, ResDH, ResUH, ResDM, ResUM, ResDS, ResUS, um_seg_out: out STD_LOGIC;
-	 DH_out, UH_out, DM_out, UM_out, DS_out, US_out: out STD_LOGIC_VECTOR(3 downto 0);
-	 controle_out: out STD_LOGIC_VECTOR(20 downto 0);
-	 
     LEDR  : out STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
     LEDG  : out STD_LOGIC_VECTOR(8 DOWNTO 0) := (others => '0');
 	 
@@ -46,8 +39,11 @@ architecture comportamento of relogio is
 	signal ResDS_aux:  std_logic := '0';
 	signal ResUS_aux:  std_logic := '0';
 	signal sempre	 :	 std_logic := '1';
+	signal clk_digital:std_logic := '0';
 	signal um_seg	 :	 std_logic := '0';
+	signal um_ajusta: std_logic := '0';
 	signal ajusta	 :	 std_logic := '0';
+	signal but_divisor :  std_logic := '0';
 	signal but_doneUM :  std_logic := '0';
 	signal but_doneDM :  std_logic := '0';
 	signal but_doneUH :  std_logic := '0';
@@ -64,6 +60,8 @@ architecture comportamento of relogio is
 	signal auxOverFlow: std_logic;
 	
 	signal controle : std_logic_vector(20 downto 0);
+	
+	signal divisor_clk: std_logic_vector(24 downto 0) := "1011111010111100001000000";
 begin
 
   -- Instancia o fluxo de dados mais simples:
@@ -86,6 +84,7 @@ begin
   
   display0 : entity work.conversorHex7seg
     Port map (saida7seg => HEX0, dadoHex => US_out_aux);
+	 
   display1 : entity work.conversorHex7seg
     Port map (saida7seg => HEX1, dadoHex => DS_out_aux);
 
@@ -116,10 +115,33 @@ begin
   -- Instacia a maquina de estados:
 	sequenciador : entity work.SM1
     port map( reset => auxReset, clock => CLOCK_50,
-				  ajusta => ajusta, but_doneUM => but_doneUM, but_doneDM => but_doneDM, but_doneUH => but_doneUH, but_doneDH => but_doneDH, 
+				  ajusta => ajusta, but_doneUM => but_doneUM, but_doneDM => but_doneDM, but_doneUH => but_doneUH, but_doneDH => but_doneDH,
+				  um_ajusta => um_ajusta, 
 				  Z => Z_aux, sempre => sempre, um_seg => um_seg,controle => controle, state => state_aux);  --,
-				  
-	clk_1seg: entity work.clk_div port map(clk_50 => CLOCK_50, clk_1s => um_seg);
+	
+	clk_1seg: entity work.divisorGenerico(divInteiro)
+            generic map (divisor => to_integer(unsigned(divisor_clk)))
+            port map (clk => CLOCK_50, saida_clk => clk_digital);
+	
+	
+	process(clk_digital, um_ajusta)
+	begin
+		if(rising_edge(clk_digital)) then
+			um_seg <= '1';
+		end if;
+		if(um_ajusta = '1') then
+			um_seg <= '0';
+		end if;
+	end process;
+	
+	process(but_divisor)
+	begin
+		if(rising_edge(but_divisor)) then
+			divisor_clk <= divisor_clk - "0000011110100001001000000";
+		end if;
+	end process;
+			
+--	clk_1seg: entity work.clk_div port map(clk_50 => CLOCK_50, clk_1s => um_seg);
 	
 	ResDH_aux <= controle(20);	
 	ResUH_aux <= controle(19);
@@ -142,7 +164,7 @@ begin
 	
 	ajusta <= SW(17);
 	
-	but_doneUM <= KEY(0);
+	but_divisor<= KEY(0);
 	but_doneDM <= KEY(1);
 	but_doneUH <= KEY(2);
 	but_doneDH <= KEY(3);

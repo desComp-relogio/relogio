@@ -4,7 +4,7 @@
 ; Hierarchy    ; Input ; Constant Input ; Unused Input ; Floating Input ; Output ; Constant Output ; Unused Output ; Floating Output ; Bidir ; Constant Bidir ; Unused Bidir ; Input only Bidir ; Output only Bidir ;
 +--------------+-------+----------------+--------------+----------------+--------+-----------------+---------------+-----------------+-------+----------------+--------------+------------------+-------------------+
 ; clk_1seg     ; 1     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; sequenciador ; 10    ; 3              ; 0            ; 3              ; 26     ; 3               ; 3             ; 3               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; sequenciador ; 10    ; 3              ; 0            ; 3              ; 27     ; 3               ; 3             ; 3               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; display7     ; 7     ; 6              ; 0            ; 6              ; 7      ; 6               ; 6             ; 6               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; display6     ; 7     ; 3              ; 0            ; 3              ; 7      ; 3               ; 3             ; 3               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; display5     ; 7     ; 3              ; 0            ; 3              ; 7      ; 3               ; 3             ; 3               ; 0     ; 0              ; 0            ; 0                ; 0                 ;

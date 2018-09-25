@@ -3,99 +3,135 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -8.407
-TNS   : -30.667
+Slack : -9.727
+TNS   : -38.737
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -7.368
-TNS   : -368.567
-
-Type  : Slow 1200mV 85C Model Hold 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -4.157
-TNS   : -7.484
+Slack : -7.730
+TNS   : -327.597
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.307
+Slack : 0.411
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'SM1:sequenciador|fstate.ajustaUM'
+Slack : 0.993
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'divisorGenerico:clk_1seg|tick'
+Slack : -3.943
+TNS   : -3.943
+
 Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.956
-TNS   : -56.267
+Slack : -3.145
+TNS   : -63.839
 
 Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
-Slack : 1.449
+Slack : 1.509
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'divisorGenerico:clk_1seg|tick'
+Slack : 3.956
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -95.520
+TNS   : -92.950
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:clk_1seg|tick'
+Slack : -1.285
+TNS   : -1.285
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -1.570
-TNS   : -38.124
+Slack : -0.158
+TNS   : -4.204
 
 Type  : Slow 1200mV 0C Model Setup 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -7.883
-TNS   : -28.607
+Slack : -9.117
+TNS   : -36.307
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -6.740
-TNS   : -333.004
-
-Type  : Slow 1200mV 0C Model Hold 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -3.656
-TNS   : -6.433
+Slack : -7.047
+TNS   : -293.966
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.247
+Slack : 0.387
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'SM1:sequenciador|fstate.ajustaUM'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'divisorGenerico:clk_1seg|tick'
+Slack : -3.447
+TNS   : -3.447
+
 Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
-Slack : -2.675
-TNS   : -49.795
+Slack : -2.811
+TNS   : -56.025
 
 Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
-Slack : 1.297
+Slack : 1.366
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'divisorGenerico:clk_1seg|tick'
+Slack : 3.569
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -95.520
+TNS   : -92.950
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:clk_1seg|tick'
+Slack : -1.285
+TNS   : -1.285
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -1.494
-TNS   : -33.363
+Slack : -0.236
+TNS   : -3.901
 
 Type  : Fast 1200mV 0C Model Setup 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -4.159
-TNS   : -14.804
+Slack : -4.798
+TNS   : -19.063
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -3.356
-TNS   : -149.288
-
-Type  : Fast 1200mV 0C Model Hold 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -2.290
-TNS   : -4.419
+Slack : -3.409
+TNS   : -130.173
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.006
-TNS   : -0.006
+Slack : -0.054
+TNS   : -0.054
+
+Type  : Fast 1200mV 0C Model Hold 'SM1:sequenciador|fstate.ajustaUM'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'divisorGenerico:clk_1seg|tick'
+Slack : -1.595
+TNS   : -1.595
 
 Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.106
-TNS   : -18.636
+Slack : -1.189
+TNS   : -22.382
 
 Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
-Slack : 0.667
+Slack : 0.727
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'divisorGenerico:clk_1seg|tick'
+Slack : 2.063
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -91.364
+TNS   : -88.424
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:clk_1seg|tick'
+Slack : -1.000
+TNS   : -1.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SM1:sequenciador|fstate.ajustaUM'
-Slack : -0.747
-TNS   : -10.644
+Slack : -0.009
+TNS   : -0.042
 
 ------------------------------------------------------------
