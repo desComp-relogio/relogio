@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Failed - Mon Sep 24 18:46:44 2018
-Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Thu Sep 27 20:18:47 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : relogio
 Top-level Entity Name : relogio
 Family : Cyclone IV E
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
+Total logic elements : 249
+    Total combinational functions : 227
+    Dedicated logic registers : 86
+Total registers : 86
+Total pins : 106
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

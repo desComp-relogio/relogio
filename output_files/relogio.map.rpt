@@ -1,6 +1,6 @@
 Analysis & Synthesis report for relogio
-Mon Sep 24 18:46:44 2018
-Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Thu Sep 27 20:18:47 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -10,47 +10,75 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |relogio|SM1:sequenciador|fstate
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDH
+ 13. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUH
+ 14. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDM
+ 15. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUM
+ 16. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDS
+ 17. Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUS
+ 18. Parameter Settings for User Entity Instance: divisorGenerico:clk_1seg
+ 19. Parameter Settings for User Entity Instance: divisorGenerico:clk_rapido
+ 20. Port Connectivity Checks: "SM1:sequenciador"
+ 21. Port Connectivity Checks: "conversorHex7Seg:display7"
+ 22. Port Connectivity Checks: "conversorHex7Seg:display6"
+ 23. Port Connectivity Checks: "conversorHex7Seg:display5"
+ 24. Port Connectivity Checks: "conversorHex7Seg:display4"
+ 25. Port Connectivity Checks: "conversorHex7Seg:display3"
+ 26. Port Connectivity Checks: "conversorHex7Seg:display2"
+ 27. Port Connectivity Checks: "conversorHex7Seg:display1"
+ 28. Port Connectivity Checks: "conversorHex7Seg:display0"
+ 29. Port Connectivity Checks: "fluxoDados:FD|ULA:ULA"
+ 30. Port Connectivity Checks: "fluxoDados:FD|mux_5_to_1:mux_5"
+ 31. Port Connectivity Checks: "fluxoDados:FD"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Sep 24 18:46:44 2018           ;
-; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 27 20:18:47 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 249                                         ;
+;     Total combinational functions  ; 227                                         ;
+;     Dedicated logic registers      ; 86                                          ;
+; Total registers                    ; 86                                          ;
+; Total pins                         ; 106                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -70,7 +98,7 @@ agreement for further details.
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
 ; Safe State Machine                                                         ; Off                ; Off                ;
@@ -122,7 +150,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                          ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
@@ -138,19 +166,429 @@ agreement for further details.
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; SM1.vhd                          ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/SM1.vhd                 ;         ;
+; relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/relogio.vhd             ;         ;
+; mux_6_to_1.vhd                   ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd          ;         ;
+; fluxoDados.vhd                   ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/fluxoDados.vhd          ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/ULA.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/registradorGenerico.vhd ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/divisorGenerico.vhd     ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/conversorHex7Seg.vhd    ;         ;
+; mux_5_to_1.vhd                   ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd          ;         ;
+; mux_2.vhd                        ; yes             ; User VHDL File  ; C:/Users/elisa/Desktop/relogio/mux_2.vhd               ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 249            ;
+;                                             ;                ;
+; Total combinational functions               ; 227            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 105            ;
+;     -- 3 input functions                    ; 34             ;
+;     -- <=2 input functions                  ; 88             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 183            ;
+;     -- arithmetic mode                      ; 44             ;
+;                                             ;                ;
+; Total registers                             ; 86             ;
+;     -- Dedicated logic registers            ; 86             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 106            ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 85             ;
+; Total fan-out                               ; 1070           ;
+; Average fan-out                             ; 2.04           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name         ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------------+--------------+
+; |relogio                          ; 227 (20)            ; 86 (1)                    ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |relogio                                         ; relogio             ; work         ;
+;    |SM1:sequenciador|             ; 55 (55)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|SM1:sequenciador                        ; SM1                 ; work         ;
+;    |conversorHex7Seg:display0|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display0               ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display1|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display1               ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display2|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display2               ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display3|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display3               ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display4|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display4               ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display5|    ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display5               ; conversorHex7Seg    ; work         ;
+;    |divisorGenerico:clk_1seg|     ; 47 (47)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:clk_1seg                ; divisorGenerico     ; work         ;
+;    |divisorGenerico:clk_rapido|   ; 26 (26)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:clk_rapido              ; divisorGenerico     ; work         ;
+;    |fluxoDados:FD|                ; 36 (2)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD                           ; fluxoDados          ; work         ;
+;       |ULA:ULA|                   ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|ULA:ULA                   ; ULA                 ; work         ;
+;       |mux_2:mux_2|               ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|mux_2:mux_2               ; mux_2               ; work         ;
+;       |mux_5_to_1:mux_5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|mux_5_to_1:mux_5          ; mux_5_to_1          ; work         ;
+;       |mux_6_to_1:mux_6|          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|mux_6_to_1:mux_6          ; mux_6_to_1          ; work         ;
+;       |registradorGenerico:regDH| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regDH ; registradorGenerico ; work         ;
+;       |registradorGenerico:regDM| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regDM ; registradorGenerico ; work         ;
+;       |registradorGenerico:regDS| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regDS ; registradorGenerico ; work         ;
+;       |registradorGenerico:regUH| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regUH ; registradorGenerico ; work         ;
+;       |registradorGenerico:regUM| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regUM ; registradorGenerico ; work         ;
+;       |registradorGenerico:regUS| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxoDados:FD|registradorGenerico:regUS ; registradorGenerico ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |relogio|SM1:sequenciador|fstate                                                                                                                                                                                                                                                                                                                                                                  ;
++----------------------+------------------+------------------+------------------+-----------------+-----------------+-------------------+----------------+----------------+----------------+----------------+----------------+---------------------+----------------------+---------------------+-------------------+-------------------+-------------------+----------------+-------------------+------------------+
+; Name                 ; fstate.ajusta_DH ; fstate.ajusta_UH ; fstate.ajusta_DM ; fstate.ajustaUM ; fstate.isAjusta ; fstate.espera_seg ; fstate.soma_uh ; fstate.soma_dm ; fstate.soma_um ; fstate.soma_dh ; fstate.soma_ds ; fstate.compara_dh_2 ; fstate.compara_uh_10 ; fstate.compara_uh_4 ; fstate.compara_dm ; fstate.compara_um ; fstate.compara_ds ; fstate.soma_us ; fstate.compara_us ; fstate.reset_all ;
++----------------------+------------------+------------------+------------------+-----------------+-----------------+-------------------+----------------+----------------+----------------+----------------+----------------+---------------------+----------------------+---------------------+-------------------+-------------------+-------------------+----------------+-------------------+------------------+
+; fstate.reset_all     ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 0                ;
+; fstate.compara_us    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 1                 ; 1                ;
+; fstate.soma_us       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 1              ; 0                 ; 1                ;
+; fstate.compara_ds    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 1                 ; 0              ; 0                 ; 1                ;
+; fstate.compara_um    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 1                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.compara_dm    ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 1                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.compara_uh_4  ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 1                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.compara_uh_10 ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 1                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.compara_dh_2  ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.soma_ds       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.soma_dh       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.soma_um       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.soma_dm       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.soma_uh       ; 0                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.espera_seg    ; 0                ; 0                ; 0                ; 0               ; 0               ; 1                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.isAjusta      ; 0                ; 0                ; 0                ; 0               ; 1               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.ajustaUM      ; 0                ; 0                ; 0                ; 1               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.ajusta_DM     ; 0                ; 0                ; 1                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.ajusta_UH     ; 0                ; 1                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
+; fstate.ajusta_DH     ; 1                ; 0                ; 0                ; 0               ; 0               ; 0                 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                   ; 0                    ; 0                   ; 0                 ; 0                 ; 0                 ; 0              ; 0                 ; 1                ;
++----------------------+------------------+------------------+------------------+-----------------+-----------------+-------------------+----------------+----------------+----------------+----------------+----------------+---------------------+----------------------+---------------------+-------------------+-------------------+-------------------+----------------+-------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; valor_ajusta_aux[1]                                ; valor_ajusta_aux[1] ; yes                    ;
+; valor_ajusta_aux[3]                                ; valor_ajusta_aux[1] ; yes                    ;
+; valor_ajusta_aux[0]                                ; valor_ajusta_aux[1] ; yes                    ;
+; valor_ajusta_aux[2]                                ; valor_ajusta_aux[1] ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 86    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 25    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |relogio|fluxoDados:FD|mux_6_to_1:mux_6|Mux0 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |relogio|valor_ajusta_aux[3]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDH ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUH ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDM ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUM ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regDS ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxoDados:FD|registradorGenerico:regUS ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:clk_1seg ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                            ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:clk_rapido ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; divisor        ; 10000 ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "SM1:sequenciador" ;
++--------+-------+----------+------------------+
+; Port   ; Type  ; Severity ; Details          ;
++--------+-------+----------+------------------+
+; reset  ; Input ; Info     ; Stuck at GND     ;
+; sempre ; Input ; Info     ; Stuck at VCC     ;
++--------+-------+----------+------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display7" ;
++------------+-------+----------+-----------------------+
+; Port       ; Type  ; Severity ; Details               ;
++------------+-------+----------+-----------------------+
+; dadohex[2] ; Input ; Info     ; Stuck at GND          ;
+; dadohex[0] ; Input ; Info     ; Stuck at GND          ;
+; negativo   ; Input ; Info     ; Stuck at GND          ;
+; overflow   ; Input ; Info     ; Stuck at GND          ;
++------------+-------+----------+-----------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display6" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; dadohex  ; Input ; Info     ; Stuck at VCC            ;
+; apaga    ; Input ; Info     ; Stuck at VCC            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display5" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display1" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:display0" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDados:FD|ULA:ULA"                                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDados:FD|mux_5_to_1:mux_5" ;
++---------+-------+----------+-------------------------------+
+; Port    ; Type  ; Severity ; Details                       ;
++---------+-------+----------+-------------------------------+
+; a[3..1] ; Input ; Info     ; Stuck at GND                  ;
+; a[0]    ; Input ; Info     ; Stuck at VCC                  ;
+; b[3..2] ; Input ; Info     ; Stuck at GND                  ;
+; b[1]    ; Input ; Info     ; Stuck at VCC                  ;
+; b[0]    ; Input ; Info     ; Stuck at GND                  ;
+; c[1..0] ; Input ; Info     ; Stuck at GND                  ;
+; c[3]    ; Input ; Info     ; Stuck at GND                  ;
+; c[2]    ; Input ; Info     ; Stuck at VCC                  ;
+; d[2..1] ; Input ; Info     ; Stuck at VCC                  ;
+; d[3]    ; Input ; Info     ; Stuck at GND                  ;
+; d[0]    ; Input ; Info     ; Stuck at GND                  ;
+; e[3]    ; Input ; Info     ; Stuck at VCC                  ;
+; e[2]    ; Input ; Info     ; Stuck at GND                  ;
+; e[1]    ; Input ; Info     ; Stuck at VCC                  ;
+; e[0]    ; Input ; Info     ; Stuck at GND                  ;
++---------+-------+----------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDados:FD"                                                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; rst      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 106                         ;
+; cycloneiii_ff         ; 86                          ;
+;     CLR               ; 1                           ;
+;     ENA CLR           ; 24                          ;
+;     plain             ; 61                          ;
+; cycloneiii_lcell_comb ; 230                         ;
+;     arith             ; 44                          ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 5                           ;
+;     normal            ; 186                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 105                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.30                        ;
+; Average LUT depth     ; 4.30                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -158,50 +596,175 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Mon Sep 24 18:46:34 2018
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Sep 27 20:18:34 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file SM1.vhd
-    Info (12022): Found design unit 1: SM1-BEHAVIOR File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 40
-    Info (12023): Found entity 1: SM1 File: /home/raphacosta/Desktop/relogio/SM1.vhd Line: 22
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file sm1.vhd
+    Info (12022): Found design unit 1: SM1-BEHAVIOR File: C:/Users/elisa/Desktop/relogio/SM1.vhd Line: 38
+    Info (12023): Found entity 1: SM1 File: C:/Users/elisa/Desktop/relogio/SM1.vhd Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: relogio-comportamento File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 20
-    Info (12023): Found entity 1: relogio File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 5
+    Info (12022): Found design unit 1: relogio-comportamento File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 20
+    Info (12023): Found entity 1: relogio File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux_6_to_1.vhd
-    Info (12022): Found design unit 1: mux_6_to_1-rtl File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 28
-    Info (12023): Found entity 1: mux_6_to_1 File: /home/raphacosta/Desktop/relogio/mux_6_to_1.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file fluxoDados.vhd
-    Info (12022): Found design unit 1: fluxoDados-simples File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 27
-    Info (12023): Found entity 1: fluxoDados File: /home/raphacosta/Desktop/relogio/fluxoDados.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: /home/raphacosta/Desktop/relogio/ULA.vhd Line: 14
-    Info (12023): Found entity 1: ULA File: /home/raphacosta/Desktop/relogio/ULA.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/raphacosta/Desktop/relogio/registradorGenerico.vhd Line: 14
-    Info (12023): Found entity 1: registradorGenerico File: /home/raphacosta/Desktop/relogio/registradorGenerico.vhd Line: 4
-Info (12021): Found 4 design units, including 1 entities, in source file divisorGenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divPor2 File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 15
-    Info (12022): Found design unit 2: divisorGenerico-divPotenciaDe2 File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 29
-    Info (12022): Found design unit 3: divisorGenerico-divInteiro File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 43
-    Info (12023): Found entity 1: divisorGenerico File: /home/raphacosta/Desktop/relogio/divisorGenerico.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/raphacosta/Desktop/relogio/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: /home/raphacosta/Desktop/relogio/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: mux_6_to_1-rtl File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 28
+    Info (12023): Found entity 1: mux_6_to_1 File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file fluxodados.vhd
+    Info (12022): Found design unit 1: fluxoDados-simples File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 27
+    Info (12023): Found entity 1: fluxoDados File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/elisa/Desktop/relogio/ULA.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: C:/Users/elisa/Desktop/relogio/ULA.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/elisa/Desktop/relogio/registradorGenerico.vhd Line: 14
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/elisa/Desktop/relogio/registradorGenerico.vhd Line: 4
+Info (12021): Found 4 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divPor2 File: C:/Users/elisa/Desktop/relogio/divisorGenerico.vhd Line: 15
+    Info (12022): Found design unit 2: divisorGenerico-divPotenciaDe2 File: C:/Users/elisa/Desktop/relogio/divisorGenerico.vhd Line: 29
+    Info (12022): Found design unit 3: divisorGenerico-divInteiro File: C:/Users/elisa/Desktop/relogio/divisorGenerico.vhd Line: 43
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/elisa/Desktop/relogio/divisorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/elisa/Desktop/relogio/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/elisa/Desktop/relogio/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux_5_to_1.vhd
-    Info (12022): Found design unit 1: mux_5_to_1-rtl File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 30
-    Info (12023): Found entity 1: mux_5_to_1 File: /home/raphacosta/Desktop/relogio/mux_5_to_1.vhd Line: 11
+    Info (12022): Found design unit 1: mux_5_to_1-rtl File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 30
+    Info (12023): Found entity 1: mux_5_to_1 File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file mux_2.vhd
-    Info (12022): Found design unit 1: mux_2-rtl File: /home/raphacosta/Desktop/relogio/mux_2.vhd Line: 27
-    Info (12023): Found entity 1: mux_2 File: /home/raphacosta/Desktop/relogio/mux_2.vhd Line: 11
+    Info (12022): Found design unit 1: mux_2-rtl File: C:/Users/elisa/Desktop/relogio/mux_2.vhd Line: 27
+    Info (12023): Found entity 1: mux_2 File: C:/Users/elisa/Desktop/relogio/mux_2.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-Behavioral File: /home/raphacosta/Desktop/relogio/clk_div.vhd Line: 10
-    Info (12023): Found entity 1: clk_div File: /home/raphacosta/Desktop/relogio/clk_div.vhd Line: 4
-Error (10795): VHDL error at relogio.vhd(123): actual expression for generic divisor cannot reference a signal File: /home/raphacosta/Desktop/relogio/relogio.vhd Line: 123
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 1236 megabytes
-    Error: Processing ended: Mon Sep 24 18:46:44 2018
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:22
+    Info (12022): Found design unit 1: clk_div-Behavioral File: C:/Users/elisa/Desktop/relogio/clk_div.vhd Line: 10
+    Info (12023): Found entity 1: clk_div File: C:/Users/elisa/Desktop/relogio/clk_div.vhd Line: 4
+Info (12127): Elaborating entity "relogio" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(12): used explicit default value for signal "LEDR" because signal was never assigned a value File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(13): used explicit default value for signal "LEDG" because signal was never assigned a value File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(26): used explicit default value for signal "auxReset" because signal was never assigned a value File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(41): used explicit default value for signal "sempre" because signal was never assigned a value File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 41
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(49): used explicit default value for signal "but_divisor" because signal was never assigned a value File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 49
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(63): object "auxOverFlow" assigned a value but never read File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at relogio.vhd(138): signal "seg_rapido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at relogio.vhd(140): signal "seg_normal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 140
+Warning (10631): VHDL Process Statement warning at relogio.vhd(135): inferring latch(es) for signal or variable "clk_digital", which holds its previous value in one or more paths through the process File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at relogio.vhd(212): signal "DH_out_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 212
+Warning (10631): VHDL Process Statement warning at relogio.vhd(194): inferring latch(es) for signal or variable "valor_ajusta_aux", which holds its previous value in one or more paths through the process File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+Info (10041): Inferred latch for "valor_ajusta_aux[0]" at relogio.vhd(194) File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+Info (10041): Inferred latch for "valor_ajusta_aux[1]" at relogio.vhd(194) File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+Info (10041): Inferred latch for "valor_ajusta_aux[2]" at relogio.vhd(194) File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+Info (10041): Inferred latch for "valor_ajusta_aux[3]" at relogio.vhd(194) File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+Info (10041): Inferred latch for "clk_digital" at relogio.vhd(135) File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 135
+Info (12129): Elaborating entity "fluxoDados" using architecture "A:simples" for hierarchy "fluxoDados:FD" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 71
+Warning (10541): VHDL Signal Declaration warning at fluxoDados.vhd(23): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 23
+Warning (10036): Verilog HDL or VHDL warning at fluxoDados.vhd(29): object "overflowLocal" assigned a value but never read File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 29
+Info (12128): Elaborating entity "mux_6_to_1" for hierarchy "fluxoDados:FD|mux_6_to_1:mux_6" File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(37): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(38): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(39): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(40): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(41): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at mux_6_to_1.vhd(42): signal "F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at mux_6_to_1.vhd(34): inferring latch(es) for signal or variable "q", which holds its previous value in one or more paths through the process File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Info (10041): Inferred latch for "q[0]" at mux_6_to_1.vhd(34) File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Info (10041): Inferred latch for "q[1]" at mux_6_to_1.vhd(34) File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Info (10041): Inferred latch for "q[2]" at mux_6_to_1.vhd(34) File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Info (10041): Inferred latch for "q[3]" at mux_6_to_1.vhd(34) File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Info (12128): Elaborating entity "mux_5_to_1" for hierarchy "fluxoDados:FD|mux_5_to_1:mux_5" File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(38): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(39): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(40): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(41): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at mux_5_to_1.vhd(42): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at mux_5_to_1.vhd(35): inferring latch(es) for signal or variable "q", which holds its previous value in one or more paths through the process File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Info (10041): Inferred latch for "q[0]" at mux_5_to_1.vhd(35) File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Info (10041): Inferred latch for "q[1]" at mux_5_to_1.vhd(35) File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Info (10041): Inferred latch for "q[2]" at mux_5_to_1.vhd(35) File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Info (10041): Inferred latch for "q[3]" at mux_5_to_1.vhd(35) File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Info (12128): Elaborating entity "ULA" for hierarchy "fluxoDados:FD|ULA:ULA" File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 39
+Info (12128): Elaborating entity "mux_2" for hierarchy "fluxoDados:FD|mux_2:mux_2" File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 40
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxoDados:FD|registradorGenerico:regDH" File: C:/Users/elisa/Desktop/relogio/fluxoDados.vhd Line: 41
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 88
+Info (12128): Elaborating entity "SM1" for hierarchy "SM1:sequenciador" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 119
+Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divinteiro" for hierarchy "divisorGenerico:clk_1seg" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 125
+Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divinteiro" for hierarchy "divisorGenerico:clk_rapido" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 129
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer clk_digital~0 File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 42
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[0]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[1]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[2]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_5_to_1:mux_5|q[3]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_5_to_1.vhd Line: 35
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[0]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[1]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[2]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Warning (14026): LATCH primitive "fluxoDados:FD|mux_6_to_1:mux_6|q[3]" is permanently enabled File: C:/Users/elisa/Desktop/relogio/mux_6_to_1.vhd Line: 34
+Warning (13012): Latch valor_ajusta_aux[1] has unsafe behavior File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr21 File: C:/Users/elisa/Desktop/relogio/SM1.vhd Line: 67
+Warning (13012): Latch valor_ajusta_aux[3] has unsafe behavior File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr20 File: C:/Users/elisa/Desktop/relogio/SM1.vhd Line: 67
+Warning (13012): Latch valor_ajusta_aux[0] has unsafe behavior File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr21 File: C:/Users/elisa/Desktop/relogio/SM1.vhd Line: 67
+Warning (13012): Latch valor_ajusta_aux[2] has unsafe behavior File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 194
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:sequenciador|WideOr21 File: C:/Users/elisa/Desktop/relogio/SM1.vhd Line: 67
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 12
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 13
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/elisa/Desktop/relogio/relogio.vhd Line: 10
+Info (21057): Implemented 359 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 83 output pins
+    Info (21061): Implemented 253 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Thu Sep 27 20:18:47 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
 
 

@@ -40,6 +40,9 @@ architecture comportamento of relogio is
 	signal ResUS_aux:  std_logic := '0';
 	signal sempre	 :	 std_logic := '1';
 	signal clk_digital:std_logic := '0';
+	signal seg_normal : std_logic := '0';
+	signal seg_rapido : std_logic := '0';
+	signal vel : std_logic := '0';
 	signal um_seg	 :	 std_logic := '0';
 	signal um_ajusta: std_logic := '0';
 	signal ajusta	 :	 std_logic := '0';
@@ -61,7 +64,7 @@ architecture comportamento of relogio is
 	
 	signal controle : std_logic_vector(20 downto 0);
 	
-	signal divisor_clk: std_logic_vector(24 downto 0) := "1011111010111100001000000";
+	signal divisor_clk: integer := 25000000;
 begin
 
   -- Instancia o fluxo de dados mais simples:
@@ -106,23 +109,39 @@ begin
 --  --  2 = XOR
 --  --  3 = AND
   display6 : entity work.conversorHex7seg
-    Port map (saida7seg => HEX6, dadoHex => valor_ajusta_aux);
+    Port map (saida7seg => HEX6, dadoHex => "1111", apaga => '1');
 --
   -- Indica o estado atual da maquina de estado, em decimal:
   display7 : entity work.conversorHex7seg
-    Port map (saida7seg => HEX7, dadoHex => '0' &  '0' & '0' & SW(17));
+    Port map (saida7seg => HEX7, dadoHex => SW(17) &  '0' & SW(17) & '0', apaga => not SW(17));
 --
   -- Instacia a maquina de estados:
 	sequenciador : entity work.SM1
     port map( reset => auxReset, clock => CLOCK_50,
-				  ajusta => ajusta, but_doneUM => but_doneUM, but_doneDM => but_doneDM, but_doneUH => but_doneUH, but_doneDH => but_doneDH,
+				  ajusta => ajusta, but_doneDM => but_doneDM, but_doneUH => but_doneUH, but_doneDH => but_doneDH,
 				  um_ajusta => um_ajusta, 
 				  Z => Z_aux, sempre => sempre, um_seg => um_seg,controle => controle, state => state_aux);  --,
 	
 	clk_1seg: entity work.divisorGenerico(divInteiro)
-            generic map (divisor => to_integer(unsigned(divisor_clk)))
-            port map (clk => CLOCK_50, saida_clk => clk_digital);
+            generic map (divisor => 25000000)
+            port map (clk => CLOCK_50, saida_clk => seg_normal);
 	
+	clk_rapido: entity work.divisorGenerico(divInteiro)
+            generic map (divisor => 10000)
+            port map (clk => CLOCK_50, saida_clk => seg_rapido);
+				
+	vel <= KEY(0);
+
+	process(vel)
+	begin
+		if(vel = '0') then
+			clk_digital <= seg_rapido;
+		elsif (vel = '1') then
+			clk_digital <= seg_normal;
+		else
+			null;
+		end if;
+	end process;
 	
 	process(clk_digital, um_ajusta)
 	begin
@@ -137,7 +156,7 @@ begin
 	process(but_divisor)
 	begin
 		if(rising_edge(but_divisor)) then
-			divisor_clk <= divisor_clk - "0000011110100001001000000";
+			divisor_clk <= divisor_clk - 1000000;
 		end if;
 	end process;
 			
@@ -164,12 +183,13 @@ begin
 	
 	ajusta <= SW(17);
 	
-	but_divisor<= KEY(0);
+--	but_divisor<= KEY(0);
 	but_doneDM <= KEY(1);
 	but_doneUH <= KEY(2);
 	but_doneDH <= KEY(3);
 	
 	sw_value <= SW(3 downto 0);
+	
 	
 	process(sw_value, state_aux)
 	begin

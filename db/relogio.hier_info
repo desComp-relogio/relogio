@@ -2,7 +2,8 @@
 CLOCK_50 => fluxodados:FD.clk
 CLOCK_50 => sm1:sequenciador.clock
 CLOCK_50 => divisorgenerico:clk_1seg.clk
-KEY[0] => sm1:sequenciador.but_doneUM
+CLOCK_50 => divisorgenerico:clk_rapido.clk
+KEY[0] => clk_digital.OUTPUTSELECT
 KEY[1] => sm1:sequenciador.but_doneDM
 KEY[2] => sm1:sequenciador.but_doneUH
 KEY[3] => sm1:sequenciador.but_doneDH
@@ -55,8 +56,10 @@ SW[13] => ~NO_FANOUT~
 SW[14] => ~NO_FANOUT~
 SW[15] => ~NO_FANOUT~
 SW[16] => ~NO_FANOUT~
+SW[17] => conversorhex7seg:display7.dadoHex[3]
+SW[17] => conversorhex7seg:display7.dadoHex[1]
 SW[17] => sm1:sequenciador.ajusta
-SW[17] => conversorhex7seg:display7.dadoHex[0]
+SW[17] => conversorhex7seg:display7.apaga
 LEDR[0] <= <GND>
 LEDR[1] <= <GND>
 LEDR[2] <= <GND>
@@ -1288,10 +1291,9 @@ um_seg => Selector14.IN2
 ajusta => Selector14.IN3
 ajusta => process_1.IN1
 ajusta => Selector19.IN1
-but_doneUM => process_1.IN0
-but_doneUM => process_1.IN0
-but_doneDM => process_1.IN1
-but_doneDM => process_1.IN1
+but_doneDM => process_1.IN0
+but_doneDM => process_1.IN0
+but_doneDM => process_1.IN0
 but_doneUH => process_1.IN1
 but_doneUH => process_1.IN1
 but_doneUH => process_1.IN1
@@ -1355,6 +1357,25 @@ clk => contador[21].CLK
 clk => contador[22].CLK
 clk => contador[23].CLK
 clk => contador[24].CLK
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|divisorGenerico:clk_rapido
+clk => tick.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
 saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
 
 
