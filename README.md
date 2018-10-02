@@ -61,14 +61,14 @@ Figura 3 ​ - Diagrama de Estados
 Figura 4 ​ - Representação externa da FPGA
 
 
-Quando ligado, o relógio irá apresentar nos displays de 7 segmentos (HEX 7~0) o horário inicial
+Quando ligado, o relógio irá apresentar nos displays de 7 segmentos (HEX 7:0) o horário inicial
 (00:00:00).
 Para acelerar a passagem de tempo, basta segurar o botão KEY 0.
 Para ajustar a hora, o usuário precisa levantar o SWITCH 17, no canto inferior esquerdo da
 placa, iniciando o modo de Ajuste. Para indicar que o modo de Ajuste está selecionado, o
 display HEX 7 irá exibir a letra A ​.​ Nesse modo, o ajuste do horário é feito escrevendo o valor
 desejado para cada campo do horário em binário, através dos 4 SWITCHES do lado direito
-(3~0). O campo a ser modificado começa pela Dezena da Hora (DH). Para aplicar o valor
+(3:0). O campo a ser modificado começa pela Dezena da Hora (DH). Para aplicar o valor
 selecionado pelos switches e passar para o próximo campo (UH), é necessário pressionar o
 
 botão KEY 3. Já para a Unidade da Hora (UH), usa-se o botão KEY 2 para aplicar o novo valor
